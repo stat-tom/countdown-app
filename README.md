@@ -1,2 +1,2 @@
 # new-app
-To-do list in React.
+To-do list with countdown written in React.
