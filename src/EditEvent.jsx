@@ -1,4 +1,5 @@
 import React from "react";
+import "./EditEvent.css";
 
 const EditEvent = () => {
     return (
