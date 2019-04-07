@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import "semantic-ui-css/semantic.min.css";
 
 import "./Countdown.css";
 
 const Countdown = props => (
         <div className="countdown">
             <strong>{props.name}</strong> - {props.hour}:{props.minute}
+            <div className="countdown__icons">
+                <i className="icon times" />
+            </div>
         </div>
 );
 
