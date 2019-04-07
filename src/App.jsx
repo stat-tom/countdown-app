@@ -9,20 +9,37 @@ class App extends Component {
         super();
         this.state = {
             events: [
-                { id: 0, name: "śniadanie", time: "07:00" },
-                { id: 1, name: "obiad", time: "15:00" },
-                { id: 2, name: "kolacja", time: "19:00" },
-            ]
-        }
+                { id: 0, name: "śniadanie", hour: "07", minute: "00" },
+                { id: 1, name: "obiad", hour: "15", minute: "00" },
+                { id: 2, name: "kolacja", hour: "19", minute: "00" },
+            ],
+            editedEvent: {
+                id: 3,
+                name: "",
+                hour: "",
+                minute: ""
+            }
+        };
+        this.handleEditEvent = this.handleEditEvent.bind(this);
     }
+
+    handleEditEvent(val) {
+        this.setState(prevState => {
+            return {
+                editedEvent: Object.assign(prevState.editedEvent, val)
+            };
+        });
+    }
+
     render() {
         const events = this.state.events.map(el => {
-            return <Countdown key={el.id} name={el.name} time={el.time} />;
+            return <Countdown key={el.id} name={el.name} hour={el.hour} minute={el.minute} />;
         })
+
         return (
             <div className="app">
                 {events}
-                <EditEvent />
+                <EditEvent onInputChange={val => this.handleEditEvent(val)} onSave={() => alert("A")} />
             </div> 
         );
     }
