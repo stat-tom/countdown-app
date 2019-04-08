@@ -10,9 +10,10 @@ class App extends Component {
         super();
         this.state = {
             events: [
-                { id: 0, name: "śniadanie", hour: "07", minute: "00" },
-                { id: 1, name: "obiad", hour: "15", minute: "00" },
-                { id: 2, name: "kolacja", hour: "19", minute: "00" },
+                { id: 0, name: "śniadanie", hour: "06", minute: "45" },
+                { id: 1, name: "drugie śniadanie", hour: "11", minute: "00" },
+                { id: 2, name: "obiad", hour: "16", minute: "15" },
+                { id: 3, name: "kolacja", hour: "19", minute: "00" },
             ],
             editedEvent: {
                 id: uniqid(),
