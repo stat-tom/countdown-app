@@ -1,5 +1,5 @@
 {
-  "base": "new-app",
+  "base": "node_modules",
   "paths": {
     "source": {
       "config": "src/theme.config",
