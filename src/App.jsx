@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import uniqid from "uniqid";
-
 import "./App.css";
 import Countdown from "./Countdown";
 import EditEvent from "./EditEvent";
@@ -9,10 +8,15 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
+            now: {
+                hour: new Date().getHours(),
+                minute: new Date().getMinutes(),
+                seconds: new Date().getSeconds() 
+            },
             events: [
-                { id: 0, name: "breakfast", hour: 6, minute: 45 },
-                { id: 1, name: "lunch", hour: 15, minute: 0 },
-                { id: 2, name: "supper", hour: 19, minute: 0 },
+                { id: 0, name: "śniadanie", hour: 6, minute: 30 },
+                { id: 1, name: "obiad", hour: 15, minute: 0 },
+                { id: 2, name: "kolacja", hour: 19, minute: 0 },
             ],
             editedEvent: {
                 id: uniqid(),
@@ -107,6 +111,7 @@ class App extends Component {
                     name={el.name}
                     hour={el.hour}
                     minute={el.minute}
+                    timeNow={this.state.now}
                     onRemove={id => this.handleRemoveEvent(id)}
                     onEditInit={id => this.handleEditInit(id)}
                 />

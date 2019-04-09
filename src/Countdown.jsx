@@ -4,7 +4,9 @@ import "semantic-ui-css/semantic.min.css";
 
 import "./Countdown.css";
 
-const Countdown = props => (
+const Countdown = props => {
+    console.log(props.timeNow.hour);
+    return (
         <div className="countdown">
             <strong>{props.name}</strong> - {props.hour}:{props.minute}
             <div className="countdown__icons">
@@ -12,13 +14,19 @@ const Countdown = props => (
                 <i className="icon times" onClick={() => props.onRemove(props.id)} />
             </div>
         </div>
-);
+    );
+};
 
 Countdown.propTypes = {
     name: PropTypes.string,
     hour: PropTypes.number,
     minute: PropTypes.number,
     onEditInit: PropTypes.func,
+    timeNow: PropTypes.shape({
+        hour: PropTypes.number,
+        minute: PropTypes.number,
+        seconds: PropTypes.number,
+    }),
     onRemove: PropTypes.func
 };
 
