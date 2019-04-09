@@ -17,6 +17,7 @@ class App extends Component {
                 { id: 0, name: "śniadanie", hour: 6, minute: 30 },
                 { id: 1, name: "obiad", hour: 15, minute: 0 },
                 { id: 2, name: "kolacja", hour: 19, minute: 0 },
+                { id: 3, name: "bieganie", hour: 22, minute: 0 },
             ],
             editedEvent: {
                 id: uniqid(),
@@ -26,11 +27,31 @@ class App extends Component {
             }
         };
 
+    this.timer = this.timer.bind(this);
     this.handleEditEvent = this.handleEditEvent.bind(this);
     this.handleSaveEvent = this.handleSaveEvent.bind(this);
     this.handleRemoveEvent = this.handleRemoveEvent.bind(this);
     this.handleEditInit = this.handleEditInit.bind(this);
     this.handleEditCancel = this.handleEditCancel.bind(this);
+    }
+
+    timer() {
+        this.setState({
+            now: {
+                hour: new Date().getHours(),
+                minute: new Date().getMinutes(),
+                seconds: new Date().getSeconds() 
+            }
+        });
+    }
+
+    componentDidMount() {
+      const intervalId = setInterval(this.timer, 1000);
+      this.setState({ intervalId: intervalId });
+    }
+    
+    componentWillUnmount(prevProps, prevState) {
+        clearInterval(this.state.intervalId);
     }
 
     handleEditEvent(val) {

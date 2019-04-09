@@ -1,14 +1,25 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import { hourMinuteToSeconds, secondsToHourMinuteSecond } from "./utils";
 import "semantic-ui-css/semantic.min.css";
-
 import "./Countdown.css";
 
 const Countdown = props => {
-    console.log(props.timeNow.hour);
+    const eventInSeconds = hourMinuteToSeconds(
+        props.hour,
+        props.minute
+    );
+    const nowInSeconds = hourMinuteToSeconds(
+        props.timeNow.hour,
+        props.timeNow.minute
+    ) + props.timeNow.seconds;
+
+    const diff = eventInSeconds - nowInSeconds;
+    const diffText = diff > 0 ? secondsToHourMinuteSecond(diff) : "tomorrow";
+
     return (
         <div className="countdown">
-            <strong>{props.name}</strong> - {props.hour}:{props.minute}
+            <strong>{props.name}</strong> - {diffText}
             <div className="countdown__icons">
                 <i className="icon edit" onClick={() => props.onEditInit(props.id)} />
                 <i className="icon times" onClick={() => props.onRemove(props.id)} />
