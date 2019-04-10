@@ -46,8 +46,11 @@ class App extends Component {
     }
 
     componentDidMount() {
-      const intervalId = setInterval(this.timer, 1000);
-      this.setState({ intervalId: intervalId });
+        const storageEvents = JSON.parse(localStorage.getItem("events")) || [];
+        this.setState({events: storageEvents});
+
+        const intervalId = setInterval(this.timer, 1000);
+        this.setState({ intervalId: intervalId });
     }
     
     componentWillUnmount(prevProps, prevState) {
@@ -87,7 +90,8 @@ class App extends Component {
                     minute: -1
                 }
             };
-        });
+        }, () => localStorage.setItem("events", JSON.stringify(this.state.events))
+        );
         
         /* this.setState(prevState => ({
             events: [...prevState.events, prevState.editedEvent],
@@ -103,7 +107,8 @@ class App extends Component {
     handleRemoveEvent(id) {
         this.setState(prevState => ({
             events: prevState.events.filter(el => el.id !== id)
-        }));
+        }), () => localStorage.setItem("events", JSON.stringify(this.state.events))
+        );
     }
 
     handleEditInit(id) {
