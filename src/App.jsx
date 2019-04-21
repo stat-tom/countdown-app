@@ -13,12 +13,7 @@ class App extends Component {
                 minute: new Date().getMinutes(),
                 seconds: new Date().getSeconds() 
             },
-            events: [
-                { id: 0, name: "śniadanie", hour: 6, minute: 30 },
-                { id: 1, name: "obiad", hour: 15, minute: 0 },
-                { id: 2, name: "kolacja", hour: 19, minute: 0 },
-                { id: 3, name: "bieganie", hour: 22, minute: 0 },
-            ],
+            events: [],
             editedEvent: {
                 id: uniqid(),
                 name: "",
@@ -51,6 +46,10 @@ class App extends Component {
 
         const intervalId = setInterval(this.timer, 1000);
         this.setState({ intervalId: intervalId });
+
+        /* const sortedEvents = this.events.sort((a, b) => {
+            return new Date(a).getTime() - new Date(b).getTime()
+            }).reverse(); */
     }
     
     componentWillUnmount(prevProps, prevState) {
@@ -74,7 +73,8 @@ class App extends Component {
             let updatedEvents;
             if (editedEventExist) {
                 updatedEvents = prevState.events.map(el => {
-                    if (el.id === prevState.editedEvent.id) return prevState.editedEvent;
+                    if (el.id === prevState.editedEvent.id)
+                        return prevState.editedEvent;
                     else return el;  
                 });
             } else {
@@ -92,16 +92,6 @@ class App extends Component {
             };
         }, () => localStorage.setItem("events", JSON.stringify(this.state.events))
         );
-        
-        /* this.setState(prevState => ({
-            events: [...prevState.events, prevState.editedEvent],
-            editedEvent: {
-                id: uniqid(),
-                name: "",
-                hour: "",
-                minute: ""
-            }
-        })); */
     }
 
     handleRemoveEvent(id) {
@@ -113,7 +103,7 @@ class App extends Component {
 
     handleEditInit(id) {
         this.setState(prevState => ({
-            editedEvent: {...prevState.events[id]}
+            editedEvent: { ...prevState.events.find(el => el.id === id) }
         }));
     }
 
