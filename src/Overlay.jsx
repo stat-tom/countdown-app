@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Overlay.css";
+import "semantic-ui-css/semantic.min.css";
 
 class Overlay extends Component {
     constructor() {
@@ -29,7 +30,7 @@ class Overlay extends Component {
             <div className="overlay">
                 <span onClick={() => this.toggleVisible()}>info</span>
                 <div className={overlayClass}>
-                    <span className="overlay__close" onClick={() => this.toggleVisible()}>close</span>
+                    <span className="overlay__close" onClick={() => this.toggleVisible()}><i class="close icon"></i>close</span>
                     {this.props.children}
                 </div>
             </div>

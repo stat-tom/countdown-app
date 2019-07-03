@@ -20,7 +20,7 @@ const Countdown = props => {
 
     return (
         <div className="countdown">
-            <strong>{props.name}</strong> - {diffText}
+            <strong><i class="clock outline icon"></i>{props.name}</strong> - {diffText}
             <div className="countdown__icons">
                 <i className="icon edit" onClick={() => props.onEditInit(props.id)} />
                 <i className="icon times" onClick={() => props.onRemove(props.id)} />
@@ -30,6 +30,7 @@ const Countdown = props => {
                     {props.name}
                 </h1>
                 <p>
+                    <i class="clock outline icon"></i>
                     {props.hour.toString().padStart(2, 0)}:{props.minute.toString().padStart(2, 0)}
                 </p>
             </Overlay>

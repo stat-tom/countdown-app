@@ -28,7 +28,7 @@ class App extends Component {
     this.handleRemoveEvent = this.handleRemoveEvent.bind(this);
     this.handleEditInit = this.handleEditInit.bind(this);
     this.handleEditCancel = this.handleEditCancel.bind(this);
-    this.handleSortEvents = this.handleSortEvents.bind(this);
+    /* this.handleSortEvents = this.handleSortEvents.bind(this); */
     }
 
     timer() {
@@ -47,8 +47,6 @@ class App extends Component {
 
         const intervalId = setInterval(this.timer, 1000);
         this.setState({ intervalId: intervalId });
-
-        /* window.addEventListener('load', this.handleSortEvents); */
     }
     
     componentWillUnmount(prevProps, prevState) {
@@ -117,12 +115,10 @@ class App extends Component {
         });
     }
 
-    handleSortEvents() {
-        return this.events.sort(function(a,b){
-            return a.getTime() - b.getTime()});
-    }
-
-    
+   /*  handleSortEvents() {
+        this.state.events.sort(function(a, b) {
+            return a > b ? -1 : 1;
+    }); */
 
     render() {
         const events = this.state.events.map(el => {

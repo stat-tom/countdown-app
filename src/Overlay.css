@@ -4,14 +4,14 @@
 
 .overlay span {
     float: right;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     display: none;
     padding: 0 10px;
 }
 
 .overlay__modal {
-    background: #fff;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     color: #000;
     display: none;
     height: 100%;
