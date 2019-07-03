@@ -20,8 +20,8 @@ const Countdown = props => {
 
     return (
         <div className="countdown">
-            <i class="clock outline icon"></i>
-            <strong>{props.name}</strong> - {diffText}
+            <strong>
+                <i class="clock outline icon"></i>{props.name}</strong> - {diffText}
             <div className="countdown__icons">
                 <i className="icon edit" title="edit" onClick={() => props.onEditInit(props.id)} />
                 <i className="icon times" title="close" onClick={() => props.onRemove(props.id)} />
