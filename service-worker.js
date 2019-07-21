@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ridingTom/countdown-app/precache-manifest.af5f81cee1d252a358fb8473a82d907b.js"
+  "/countdown-app/precache-manifest.0c3b2c54094e1e73fe1c02c179c47565.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/ridingTom/countdown-app/index.html", {
+workbox.routing.registerNavigationRoute("/countdown-app/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
