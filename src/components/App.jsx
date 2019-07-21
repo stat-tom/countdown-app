@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import uniqid from "uniqid";
-import "./App.css";
+import "../styles/App.css";
 import Countdown from "./Countdown";
 import EditEvent from "./EditEvent";
 

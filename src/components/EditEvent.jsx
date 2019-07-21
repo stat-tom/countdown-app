@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./EditEvent.css";
+import "../styles/EditEvent.css";
 
 import {
     isValidNumberInput,
@@ -8,7 +8,7 @@ import {
     isValidName,
     isValidHour,
     isValidMinute
-} from "./utils";
+} from "../utils";
 
 const EditEvent = props => {
     const isFormValid = 

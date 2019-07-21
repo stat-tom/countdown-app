@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Overlay.css";
+import "../styles/Overlay.css";
 import "semantic-ui-css/semantic.min.css";
 
 class Overlay extends Component {
