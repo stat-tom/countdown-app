@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "url": "/countdown-app/static/media/brand-icons.e8c322de.woff2"
   },
   {
-    "revision": "962a1bf31c081691065fe333d9fa8105",
-    "url": "/countdown-app/static/media/icons.962a1bf3.svg"
-  },
-  {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
     "url": "/countdown-app/static/media/brand-icons.c5ebe0b3.ttf"
+  },
+  {
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/countdown-app/static/media/icons.962a1bf3.svg"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
