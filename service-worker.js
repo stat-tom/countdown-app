@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ridingTom/countdown-app/precache-manifest.2586d79e6f3220fe58680a06edadcc10.js"
+  "/ridingTom/countdown-app/precache-manifest.af5f81cee1d252a358fb8473a82d907b.js"
 );
 
 workbox.clientsClaim();
