@@ -116,7 +116,13 @@ class App extends Component {
     }
 
     handleSortEvent() {
-        this.state.events.sort((a, b) => a.hour - b.hour);
+        this.state.events.sort((a, b) => {
+            if (a.hour !== b.hour) {
+                return (a.hour - b.hour);
+            } else {
+                return (a.minute - b.minute);
+            }
+        });
     }
 
     render() {
