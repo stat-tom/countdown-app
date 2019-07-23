@@ -117,7 +117,7 @@ class App extends Component {
 
     /* handleSortEvents() {
         this.state.events.sort(function(a, b) {
-            return a.hour - b.hour;
+            return b.hour - a.hour;
         });
     } */
 
@@ -135,6 +135,8 @@ class App extends Component {
                     onEditInit={id => this.handleEditInit(id)}
                 />
             );
+        }).sort(function(a, b) {
+            return b.hour - a.hour;
         });
 
         return (

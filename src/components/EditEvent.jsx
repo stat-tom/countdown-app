@@ -59,6 +59,7 @@ const EditEvent = props => {
             </div> 
             <button disabled={!isFormValid} onClick={() => props.onSave()}>OK</button>
             <button disabled={isFormEmpty} onClick={() => props.onCancel()}>Cancel</button>
+            <button onClick={() => props.onSort()}>Sort</button>
         </div>
     );
 };

@@ -1,7 +1,8 @@
 #root,
 .app {
     height: 100%;
-    background-image: url('../images/diary.jpg');
+    background: #D7D2BF;
+    /* background-image: url('../images/diary.jpg'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
