@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { hourMinuteToSeconds, secondsToHourMinuteSecond } from "./utils";
+import { hourMinuteToSeconds, secondsToHourMinuteSecond } from "../utils";
 import Overlay from "./Overlay";
 import "semantic-ui-css/semantic.min.css";
-import "./Countdown.css";
+import "../styles/Countdown.css";
 
 const Countdown = props => {
     const eventInSeconds = hourMinuteToSeconds(

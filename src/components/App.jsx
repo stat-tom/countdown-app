@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import uniqid from "uniqid";
-import "./App.css";
+import "../styles/App.css";
 import Countdown from "./Countdown";
 import EditEvent from "./EditEvent";
 
@@ -115,10 +115,11 @@ class App extends Component {
         });
     }
 
-   /*  handleSortEvents() {
+    /* handleSortEvents() {
         this.state.events.sort(function(a, b) {
-            return a > b ? -1 : 1;
-    }); */
+            return a.hour - b.hour;
+        });
+    } */
 
     render() {
         const events = this.state.events.map(el => {
