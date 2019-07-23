@@ -28,7 +28,7 @@ class App extends Component {
     this.handleRemoveEvent = this.handleRemoveEvent.bind(this);
     this.handleEditInit = this.handleEditInit.bind(this);
     this.handleEditCancel = this.handleEditCancel.bind(this);
-    /* this.handleSortEvents = this.handleSortEvents.bind(this); */
+    this.handleSortEvent = this.handleSortEvent.bind(this);
     }
 
     timer() {
@@ -115,11 +115,9 @@ class App extends Component {
         });
     }
 
-    /* handleSortEvents() {
-        this.state.events.sort(function(a, b) {
-            return b.hour - a.hour;
-        });
-    } */
+    handleSortEvent() {
+        this.state.events.sort((a, b) => a.hour - b.hour);
+    }
 
     render() {
         const events = this.state.events.map(el => {
@@ -135,9 +133,7 @@ class App extends Component {
                     onEditInit={id => this.handleEditInit(id)}
                 />
             );
-        }).sort(function(a, b) {
-            return b.hour - a.hour;
-        });
+        })
 
         return (
             <div className="app">
@@ -149,6 +145,7 @@ class App extends Component {
                     onInputChange={val => this.handleEditEvent(val)}
                     onSave={() => this.handleSaveEvent()}
                     onCancel={() => this.handleEditCancel()}
+                    onSort={() => this.handleSortEvent()}
                 />
             </div> 
         );
