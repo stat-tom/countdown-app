@@ -29,5 +29,5 @@ The application will allow the User to create, modify and delete a to-do item. T
 * Fork this repo.
 * Clone your new repo.
 
-Licensing
-All content is licensed under a MIT license.
+##Licensing
+* All content is licensed under a MIT license.
