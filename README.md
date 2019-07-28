@@ -13,7 +13,7 @@ A fully-functional CRUD application built with React.
 
 The application will allow the User to create, modify and delete a to-do item. The items will be stored in the Local Storage.
 
-###User Stories
+##User Stories
 
 * As a User, I should be able to add a to-do item into a list.
 * As a User, I should be able to see the time left to a task (countdown).
