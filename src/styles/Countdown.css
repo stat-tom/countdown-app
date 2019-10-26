@@ -5,7 +5,8 @@
     padding: 25px;
 }
 
-.countdown strong i {
+.countdown img {
+    max-width: 20px;
     margin-right: 20px;
 }
 
