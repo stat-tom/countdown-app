@@ -21,7 +21,8 @@ const Countdown = props => {
     return (
         <div className="countdown">
             <strong>
-                <img src="../clock.png" alt="clock_icon"></img>{props.name}</strong> - {diffText}
+                <img src="../clock.png" alt="clock_icon"></img>{props.name}
+            </strong> - {diffText}
             <div className="countdown__icons">
                 <i className="icon edit" title="edit" onClick={() => props.onEditInit(props.id)} />
                 <i className="icon times" title="close" onClick={() => props.onRemove(props.id)} />
