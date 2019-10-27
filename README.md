@@ -9,6 +9,7 @@ A fully-functional CRUD application built with React.
 * React Basics (Create React App)
 * BEM methodology
 * Semantic UI
+* Unit test with Jest
 
 
 The application will allow the User to create, modify and delete a to-do item. The items will be stored in the Local Storage.
