@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/countdown-app/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "094cfccca631c65d3a64",
+    "revision": "39f8b8554e8dd105ee2f",
     "url": "/countdown-app/static/css/main.3d57c8cb.chunk.css"
   },
   {
@@ -28,6 +28,10 @@ self.__precacheManifest = [
     "url": "/countdown-app/static/media/outline-icons.ef60a4f6.woff"
   },
   {
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/countdown-app/static/media/flags.9c74e172.png"
+  },
+  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/countdown-app/static/media/outline-icons.701ae6ab.eot"
   },
@@ -40,12 +44,8 @@ self.__precacheManifest = [
     "url": "/countdown-app/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/countdown-app/static/media/flags.9c74e172.png"
-  },
-  {
-    "revision": "094cfccca631c65d3a64",
-    "url": "/countdown-app/static/js/main.094cfccc.chunk.js"
+    "revision": "39f8b8554e8dd105ee2f",
+    "url": "/countdown-app/static/js/main.39f8b855.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/countdown-app/static/css/2.b44bb2bf.chunk.css"
   },
   {
-    "revision": "308dbb7f7b53f4f8d8bde4911c706727",
+    "revision": "a4b679d961f01d2c9f15a1924b62651d",
     "url": "/countdown-app/index.html"
   }
 ];
