@@ -22,8 +22,8 @@ The application will allow the User to create, modify and delete a to-do item. T
 * As a User, I should be able to open a new window with information about a task.
 * As a User, I should be able to sort a list of tasks by date/time.
 * As a User, I should be able to delete any tasks.
-* As a User, my tasks should persist, such that my previous tasks should display upon each visit.
-* As a User, I should be able to open the game on every device.
+* As a User, I should be able to open the application on every device.
+* User tasks should be stored in the local storage and displayed upon every visit.
 
 ##How to Get Started
 
