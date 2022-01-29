@@ -9,7 +9,7 @@ export function parseInputAsNumber(val) {
 }
 
 export function isValidName(val) {
-    if (val.length > 0) return true;
+    if (val.length > 0 && val.length <= 128) return true;
     return false;
 }
 
